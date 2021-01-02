@@ -14,9 +14,9 @@ on:
     types: [started]
 
 env:
-  MANIFEST: git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-9.0
+  MANIFEST: git://github.com/PitchBlackRecoveryProject/manifest_pb.git -b android-9.0
   DEVICE: violet
-  DT_LINK: https://github.com/Joker-V2/twrp_device_xiaomi_violet -b android-9.0
+  DT_LINK: https://github.com/SuperiorOS-Violet/twrp_device_xiaomi_violet -b pb
   DT_PATH: device/xiaomi/violet
   TARGET: recoveryimage
   TZ: Asia/Kolkata
@@ -61,4 +61,4 @@ jobs:
          run: |
               cd work/out/target/product/$DEVICE
               curl -sL https://git.io/file-transfer | sh
-              ./transfer wet recovery.img
+              ./transfer wet *.zip    
