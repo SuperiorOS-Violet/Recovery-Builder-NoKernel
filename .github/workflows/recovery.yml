@@ -14,9 +14,9 @@ on:
     types: [started]
 
 env:
-  MANIFEST: git://github.com/PitchBlackRecoveryProject/manifest_pb.git -b android-9.0
+  MANIFEST: https://gitlab.com/OrangeFox/Manifest.git -b fox_9.0
   DEVICE: violet
-  DT_LINK: https://github.com/Joker-V2/pbrp_android_device_xiaomi_violet
+  DT_LINK: https://github.com/Brock5555/ofox_xiaomi_violet.git
   DT_PATH: device/xiaomi/violet
   TARGET: recoveryimage
   TZ: Asia/Kolkata
@@ -55,7 +55,10 @@ jobs:
        - name: Build
          run: |
               cd work
-              . build/envsetup.sh &&lunch omni_$DEVICE-eng &&export ALLOW_MISSING_DEPENDENCIES=true && mka $TARGET
+              . build/envsetup.sh
+              export ALLOW_MISSING_DEPENDENCIES=true && export FOX_USE_TWRP_RECOVERY_IMAGE_BUILDER=1
+              export LC_ALL="C"
+              lunch omni_$DEVICE-eng && mka $TARGET
              
        - name: Upload recovery image
          run: |
