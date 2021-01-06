@@ -16,7 +16,7 @@ on:
 env:
   MANIFEST: git://github.com/PitchBlackRecoveryProject/manifest_pb.git -b android-9.0
   DEVICE: violet
-  DT_LINK: https://github.com/Joker-V2/android_device_xiaomi_violet-pbrp
+  DT_LINK: https://github.com/Joker-V2/pbrp_android_device_xiaomi_violet
   DT_PATH: device/xiaomi/violet
   TARGET: recoveryimage
   TZ: Asia/Kolkata
