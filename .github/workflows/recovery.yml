@@ -14,9 +14,11 @@ on:
     types: [started]
 
 env:
-  MANIFEST: git://github.com/SKYHAWK-Recovery-Project/platform_manifest_twrp_omni.git -b android-9.0
+  MANIFEST: 
+env:
+  MANIFEST: git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-9.0
   DEVICE: violet
-  DT_LINK: https://github.com/Brock5555/shrp_device_xiaomi_violet.git
+  DT_LINK: https://github.com/Brock5555/twrp_device_xiaomi_violet.git
   DT_PATH: device/xiaomi/violet
   TARGET: recoveryimage
   TZ: Asia/Kolkata
@@ -64,4 +66,4 @@ jobs:
          run: |
               cd work/out/target/product/$DEVICE
               curl -sL https://git.io/file-transfer | sh
-              ./transfer wet *.zip    
+              ./transfer wet recovery.img
