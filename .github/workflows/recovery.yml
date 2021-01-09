@@ -14,8 +14,6 @@ on:
     types: [started]
 
 env:
-  MANIFEST: 
-env:
   MANIFEST: git://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git -b twrp-9.0
   DEVICE: violet
   DT_LINK: https://github.com/Brock5555/twrp_device_xiaomi_violet.git
