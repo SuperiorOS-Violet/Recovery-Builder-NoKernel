@@ -16,7 +16,7 @@ on:
 env:
   MANIFEST: git://github.com/SHRP/platform_manifest_twrp_omni.git -b v3_9.0
   DEVICE: violet
-  DT_LINK: https://github.com/Brock5555/shrp_device_xiaomi_violet.git
+  DT_LINK: https://github.com/SHRP-Devices/android_recovery_xiaomi_violet.git
   DT_PATH: device/xiaomi/violet
   TARGET: recoveryimage
   TZ: Asia/Kolkata
